@@ -1,0 +1,75 @@
+
+
+.grandparent{
+    width:300px;
+    padding: 0 0 10px 0;
+    background-color: rgb(247, 247, 247);
+    border-radius: 5px;
+    border: solid 1px;
+}
+.grandparent > div{
+    padding: 20px 20px 0 20px;
+}
+
+.grandparent > div:nth-child(1) >div{
+    background-color: rgb(19, 19, 19);
+    margin: 0;
+    width:260;
+
+}
+.grandparent > div:nth-child(1) >div>h3{
+    color:rgb(218, 165, 52);
+    font-size: 30px;
+    padding: 10px;
+    margin: 0;
+}
+
+span{
+    font-weight: bold;
+}
+p{
+    color:rgb(59, 59, 59);
+    font-size: 18px;
+    margin: 0;
+}
+
+.grandparent > div:nth-child(2) > p{
+    padding: 10px 0 0 0;
+}
+
+.grandparent > div:nth-child(2) > div{
+    display: flex;
+}
+.grandparent > div:nth-child(2) > div> p{
+    padding: 0 5px 0 0;
+}
+.grandparent > div:nth-child(2) > div> svg{
+    padding: 5px 5px 0 0;
+    width: 10px;
+}
+
+.grandparent > div:nth-child(3) {
+    display: flex;
+}
+
+.grandparent > div:nth-child(3) >div {
+    padding: 10px;
+    margin:10px;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    border:1px solid;
+    transition: transform 0.3s;
+    margin-right: 10px;
+}
+.grandparent > div:nth-child(3) >div:nth-child(1) {
+    margin: 10px 10px 10px 0;
+}
+.grandparent > div:nth-child(3) >div:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.grandparent > div:nth-child(3) >div> svg {
+    padding: 5px 7px 0 0 ;
+    
+}

@@ -1,0 +1,58 @@
+main{
+    padding: 80px 450px 80px 450px;
+}
+
+.cabecalhos{
+    justify-content: space-between;
+    display: flex;
+    
+}
+
+main>div:nth-child(1)>div>span{
+    font-weight: bold;
+
+}
+
+main>div:nth-child(1)>div>p{
+    padding: 5px 0 5px 0;
+}
+
+main>div:nth-child(1)>div .cabecalhos> h1{
+    background-color: rgb(36, 36, 36);
+    padding: 7px;
+    color: rgb(218, 165, 52);
+}
+
+main>div:nth-child(1)>div .cabecalhos> div{
+    margin-top: 25px;
+}
+
+.forms{
+    flex-direction: column;
+    
+    display: flex;
+}
+
+.divEdit> select{
+    width:408px;
+    height: 42px;
+    margin: 20px 0 20px 0;
+    background-color: rgb(236, 236, 236);
+    border: none;
+    border-radius: 2px;
+}
+
+.divServicos > .cabecalhos >div{
+    margin-top: 25px;
+}
+
+hr{
+    margin:20px 0 20px 0;
+}
+
+.ServicesCards{
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap:51px
+}

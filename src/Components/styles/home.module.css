@@ -1,0 +1,60 @@
+
+.divMain{
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    height: 350px;
+    text-align: center;    
+    box-sizing: border-box;
+}
+
+.divMain *:not(.divMain>div, .divMain>div>div, .divMain>h2>span, .divMain>img){
+    margin: 0;
+    padding: 40px 0 0 0;
+}
+
+.divMain > div{
+    justify-content: center;
+    background-color: black;
+    margin: 40px 40px 40px 170px;
+    width:160px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.divMain > div > div{
+    color:white;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    transition: color 0.5s ease;
+}
+
+.divMain > h2> span{    
+    background-color: black;
+    color:rgb(247, 183, 8);
+    padding:10px;
+}
+
+.divMain >h2{
+    font-size: 50px;
+}
+
+.divMain > p{
+    font-size: 15px;
+    color:gray;
+}
+
+.divMain > div:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color:rgb(223, 211, 147);
+}
+.divMain > div:hover > div{
+    color:rgb(223, 211, 147)
+}
+.divMain>img{
+    padding: 20px;
+    width:460px;
+}

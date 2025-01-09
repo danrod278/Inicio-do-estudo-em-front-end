@@ -1,0 +1,32 @@
+.mainP{
+    padding: 20px 300px 0 300px;
+    display: block;
+}
+
+.mainP >div:nth-child(1){
+    display: flex;
+    justify-content: space-between
+}
+
+.div3{
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:25px
+}
+
+h2{
+    font-size: 45px;
+    color: rgb(27, 27, 27);
+}
+
+.mainP > div:nth-child(1) > div{
+    margin-top:50px;
+    width: 190px;
+    height: 40px;
+    position: relative;
+    background-color: rgb(29, 29, 29);
+    transition: transform 0.3s ease;
+}
+
+

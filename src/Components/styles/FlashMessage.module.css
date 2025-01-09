@@ -1,0 +1,36 @@
+.FlashS{
+    height:100px;
+    background-color: rgb(187, 226, 189);
+    text-align: center;
+    position: relative;
+    border: solid 0.5px rgb(188, 206, 188);
+    border-radius: 5px;
+    margin: -20px 0 25px 0;
+}
+.FlashS > p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:green
+
+}
+
+
+.FlashE{
+    height:100px;
+    background-color: rgb(250, 182, 177);
+    text-align: center;
+    position: relative;
+    border: solid 0.5px rgb(238, 168, 168);
+    border-radius: 5px;
+    margin: -20px 0 25px 0;
+}
+.FlashE > p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rgb(202, 53, 53)
+
+}

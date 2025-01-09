@@ -1,0 +1,46 @@
+.main{
+    width:400px;
+    background-color: rgb(255, 255, 255);
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.main div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+.main div:nth-child(2) >input{
+    height: 40px;
+    font-size: 15px;
+    background-color: rgb(236, 236, 236);
+    margin: 20px 0 20px 0;
+    width:400px;
+    border: none;
+    border-radius: 2px;
+}
+
+.main div:nth-child(2) > select{
+    width:408px;
+    height: 42px;
+    margin: 20px 0 20px 0;
+    background-color: rgb(236, 236, 236);
+    border: none;
+    border-radius: 2px;
+}
+
+.main div:nth-child(1) h1{
+    font-size: 40px;
+}
+
+.main div:nth-child(1) p{
+    font-size: 20px;
+    color: rgb(175, 175, 175);
+}
+
+label{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
