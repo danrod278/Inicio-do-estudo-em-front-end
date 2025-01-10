@@ -1,34 +1,22 @@
 import { useEffect, useState } from "react";
 import styles from "../styles/FlashMessage.module.css"
 
-function FlashMessage({desc, tipo}){
-    const [popupState, setPopupState] = useState()
-
-    useEffect(()=>{
-        setPopupState(true)
-
-        const time= setTimeout(()=>{
-            setPopupState(false)
-        }, 4000)
-
-        
-    }, [])
-
+function FlashMessage({desc, tipo, estado}){
     return(
         <>
         {
-            popupState ? (
+            estado ? (
                  tipo=="sucesso" ? (
                     <>
-                        <div className={styles.FlashS}>
+                        <section className={styles.FlashS}>
                             <p>{desc}</p>
-                        </div>
+                        </section>
                     </>
                  ) : (
                     <>
-                        <div className={styles.FlashE}>
+                        <section className={styles.FlashE}>
                             <p>{desc}</p>
-                        </div>
+                        </section>
                     </>
                  )
             ) : null

@@ -19,7 +19,7 @@
     border-radius: 2px;
 }
 
-.main div:nth-child(2) > select{
+.select{
     width:408px;
     height: 42px;
     margin: 20px 0 20px 0;
