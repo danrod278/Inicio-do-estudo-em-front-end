@@ -13,6 +13,7 @@
     color:rgb(255, 255, 255);
     font-size: 50px;
     margin: 15px;
+    
 }
 .header>div{
     display: flex;
@@ -45,4 +46,94 @@
 .link:hover {
     
     color: rgb(223, 211, 147); 
+}
+
+.menu{
+    color: rgb(241, 221, 103);
+    padding:5px 15px 0 0;
+    display:none;
+    width: 60px
+}
+
+.menu:hover{
+    cursor: pointer;
+    color: rgb(253, 239, 161);
+}
+
+
+.linksMenu{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999; 
+    margin:0 auto;
+
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.menuOn{
+    display:flex;
+}
+
+.linksMenu >ul{
+    list-style: none; 
+    box-shadow: 5px;
+    padding: 0%;
+    
+}
+
+.linksMenu >ul>li{
+    padding: 10px;
+
+}
+
+.linkMenu{
+    margin: 50px;
+    text-decoration: none; 
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.linkMenu:hover{
+    color: rgb(250, 250, 169);
+}
+
+@media (max-width:905px){
+    .linksNav>nav{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    
+}
+@media (max-width:485px){
+    .header>div >h1{
+        display: none;
+    }
+}
+@media(min-width:906px){
+    .linksMenu{
+        display: none;
+    }
+}
+
+
+.fechar{
+    font-size: 50px;
+    color: rgb(202, 201, 201);
+    margin-left: 80px;
+}
+
+.fechar:hover{
+    cursor: pointer;
+    color: rgb(250, 255, 223);
 }
