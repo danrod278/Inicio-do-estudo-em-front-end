@@ -14,13 +14,11 @@
     font-size: 15px;
     background-color: rgb(236, 236, 236);
     margin: 20px 0 20px 0;
-    width:400px;
     border: none;
     border-radius: 2px;
 }
 
 .select{
-    width:408px;
     height: 42px;
     margin: 20px 0 20px 0;
     background-color: rgb(236, 236, 236);
@@ -44,3 +42,34 @@ label{
 
 
 
+
+
+@media (max-width:440px){
+    .main{
+        width:300px;
+    }
+    .main div:nth-child(1) h1{
+        font-size: 35px;
+    }
+    .main div:nth-child(1) p{
+        font-size: 18px;
+        color: rgb(175, 175, 175);
+    }
+}
+
+@media (max-width:340px){
+    .main{
+        width:200px;
+    }
+    .main div:nth-child(1) h1{
+        font-size: 30px;
+    }
+    .main div:nth-child(1) p{
+        font-size: 15px;
+        color: rgb(175, 175, 175);
+    }
+    label{
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
