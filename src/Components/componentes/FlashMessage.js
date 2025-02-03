@@ -9,13 +9,13 @@ function FlashMessage({desc, tipo, estado}){
                  tipo=="sucesso" ? (
                     <>
                         <section className={styles.FlashS}>
-                            <p>{desc}</p>
+                            <p className={styles.psucesso}>{desc}</p>
                         </section>
                     </>
                  ) : (
                     <>
                         <section className={styles.FlashE}>
-                            <p>{desc}</p>
+                            <p className={styles.perro}>{desc}</p>
                         </section>
                     </>
                  )

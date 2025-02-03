@@ -24,3 +24,9 @@
 .button:hover > p{
     color: rgb(223, 211, 147);
 }
+
+@media (hover: hover) {
+    .botao:hover {
+        transform: scale(1.1);
+    }
+}

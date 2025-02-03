@@ -42,13 +42,13 @@ function NovoProjeto(){
 
     return(
         <div className={styles.main}>
-            
-            <FlashMessage desc={flashMessage.log} tipo={flashMessage.tipo} estado={flashMessage.popup}/>
 
             <div>
+            
                 <h1>Criar Projeto</h1>
-                <p>Crie seu projeto para depois adicionar os serviços</p>
+                <p className={styles.mensagem}>Crie seu projeto para depois adicionar os serviços</p>
             </div>
+
             <div>
                 <label>Nome do projeto</label>
                 <Input type="text" instrucao="Escreva o nome do projeto" name={'projectName'} setFunction={mudaNome}/>
@@ -62,7 +62,9 @@ function NovoProjeto(){
                     <option name="Planejamento">Planejamento</option>
                 </select>
             </div>
-            <Botao width={160} height={40} desc="Criar" fontSize={18} funcao={Redirecionar}/>
+            <div>
+                <FlashMessage desc={flashMessage.log} tipo={flashMessage.tipo} estado={flashMessage.popup}/>
+                <Botao width={160} height={40} desc="Criar" fontSize={18} funcao={Redirecionar}/></div>
         </div>
     )
 }
