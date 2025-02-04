@@ -11,7 +11,7 @@ function Home(){
                 <h2>Bem vindo ao <span className={styles.span}>Cost</span></h2>
                 <p>Faça seus principais projetos virarem realidade com o Cost</p>
                 <div onClick={Redirecionar}><div>Criar Projeto</div></div>
-                <img src="https://getillustrations.b-cdn.net//packs/misty-line-illustrations/scenes/_1x/security%20_%20safety,%20protection,%20safe,%20vault,%20cracking,%20locked%20out,%20woman,%20people,%20person_demo.png"/>
+                <img src="https://img.freepik.com/vetores-premium/ilustracao-de-planejamento-de-funcionarios-em-estilo-desenhado-a-mao_9206-29534.jpg?semt=ais_hybrid"/>
             </div>
 
         </>
