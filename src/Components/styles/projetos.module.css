@@ -1,18 +1,22 @@
 .mainP{
-    padding: 20px 300px 0 300px;
+    padding:20px;
     display: block;
+    
+    margin: 0 auto
 }
 
 .mainP >div:nth-child(1){
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    
 }
 
 .div3{
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap:25px
+    gap:25px;
+
 }
 
 h2{
@@ -21,12 +25,60 @@ h2{
 }
 
 .mainP > div:nth-child(1) > div{
-    margin-top:50px;
-    width: 190px;
-    height: 40px;
-    position: relative;
-    background-color: rgb(29, 29, 29);
-    transition: transform 0.3s ease;
+    margin-top:50px;    
 }
 
 
+@media (min-width:1320px){
+    .mainP{
+        width: 1275px;
+    }
+    .div3{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width:1320px){
+    .mainP{
+        width: 950px;
+    }
+    .div3{
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+}
+
+@media (max-width:1010px){
+    .mainP{
+        width: 625px;
+    }
+    .div3{
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+@media (max-width:675px){
+    .mainP{
+        width: 300px;
+    }
+    .div3{
+        grid-template-columns: 1fr ;
+    }
+    .mainP >div:nth-child(1){
+        display: block;
+        margin-bottom:40px
+    }
+    .mainP >div:nth-child(1) > h2{
+        font-size: 40px;
+        margin:20px 0 20px 0;
+    }
+
+    .mainP >div:nth-child(1) > div{
+        
+        margin:20px 0 20px 0;
+    }
+
+}
+
+.noProjects{
+    font-weight: 500;
+    margin-top: 50px;
+}

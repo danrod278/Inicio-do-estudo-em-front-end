@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
 function useSalvaLocalStorage(nome, orcamento, tipo){
-
+    let codeCor;
     //Verificando se todos os campos foram preenchidos
     if(!nome || !orcamento || !tipo){
         return "Necessário preencher todos os campos"
@@ -17,8 +17,22 @@ function useSalvaLocalStorage(nome, orcamento, tipo){
 
     var projetos =[]
 
+    //atribuindo codigo de cor
+    if(tipo=="Infra"){
+        codeCor="#ffb800"
+    }else if(tipo=="Desenvolvimento"){
+        codeCor="#0f7bcd"
+    }
+    else if(tipo=="Design"){
+        codeCor="#807bcd"
+    }
+    else if(tipo=="Planejamento"){
+        codeCor="#dadcd7"
+    }
+
     //recebendo dados do localStorage
-    const Nprojeto = {nomePj:nome, orcamentoPj:orcamento, tipoPj:tipo, _id:uuidv4()}
+    const Nprojeto = {nomePj:nome, orcamentoPj:Number(orcamento), tipoPj:tipo, _id:uuidv4(), codeCorPj:codeCor}
+    console.log(Nprojeto)
     const projetosLocalStorage = localStorage.getItem('projetos')
     if(projetosLocalStorage){
         //Passando dados para json
