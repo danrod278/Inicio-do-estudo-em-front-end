@@ -3,21 +3,21 @@ import styles from "../styles/Editar.module.css"
 import Botao from "../componentes/Botao"
 import Input from "../componentes/Inputs"
 import Servico from '../componentes/Servico'
-import {buscaDados, editaProjeto} from "../utils/editarProjeto"
+import {buscaDados, editaProjeto, carregaOrcAp} from "../utils/editarProjeto"
 import { useParams } from "react-router-dom";
 import FlashMessage from "../componentes/FlashMessage";
-import { criaNovoServico } from "../utils/manipularServicos";
+import { criaNovoServico, escreverServicos } from "../utils/manipularServicos";
 
-function Editar({nome, categoria, orc, orcAp, tipo}){
+function Editar({nome, orc, tipo}){
     const {_id} = useParams()
     const [popup, setPopup] = useState({})
     const [mensagemService, setMensagemServices] = useState({})
-
+    const [servicosJson, setServicosJson] = useState({})
     //load inicial
     const [nomeI, setNomeI] = useState()
     const [orcamentoI, setOrcamentoI] = useState()
     const [tipoI, setTipoI] = useState()
-
+    const [orcAp, setOrcAp] = useState()
     //criar
     const [edit, setEdit] = useState()
     const [name, setName] = useState()
@@ -84,6 +84,12 @@ function Editar({nome, categoria, orc, orcAp, tipo}){
 
     //funções interativas
     useEffect(()=>{
+        
+    })
+
+    useEffect(()=>{
+        setOrcAp(carregaOrcAp(_id))
+        setServicosJson(escreverServicos(_id))
         const projeto = buscaDados(_id)
         if(projeto!=false){
             setNomeI(projeto.nomePj)
@@ -125,8 +131,8 @@ function Editar({nome, categoria, orc, orcAp, tipo}){
                         <h1>{nomeI} </h1>
                         <Botao desc={stateButton} fontSize={18} funcao={mudaEdit} height={40} width={160}/>
                     </div>
-                    <p><span>Orçamento: </span>{orcamentoI}</p>
-                    <p><span>Orçamento aplicado: </span>{orcAp}</p>
+                    <p><span>Orçamento: </span>R$ {orcamentoI}</p>
+                    <p><span>Orçamento aplicado: </span>R$ {orcAp}</p>
                     <p><span>Tipo: </span>{tipoI}</p>
                     {
                         edit ? (
@@ -183,15 +189,23 @@ function Editar({nome, categoria, orc, orcAp, tipo}){
             <div>
                 <h2>Serviços</h2>
                 <div className={styles.ServicesCards}>
-                    <Servico custo={2000} desc={"Serve para melhorar o hardware"} id={2} nome={"Aprimoramento do harware"} />
-                    <Servico custo={2000} desc={"Serve para melhorar o hardware"} id={2} nome={"Aprimoramento do harware"} />
-                    <Servico custo={2000} desc={"Serve para melhorar o hardware"} id={2} nome={"Aprimoramento do harware"} />
-                    <Servico custo={2000} desc={"Serve para melhorar o hardware"} id={2} nome={"Aprimoramento do harware"} />
-                    <Servico custo={2000} desc={"Serve para melhorar o hardware"} id={2} nome={"Aprimoramento do harware"} />
-                    <Servico custo={2000} desc={"Serve para melhorar o hardware"} id={2} nome={"Aprimoramento do harware"} />
-                    <Servico custo={2000} desc={"Serve para melhorar o hardware"} id={2} nome={"Aprimoramento do harware"} />
-                    <Servico custo={2000} desc={"Serve para melhorar o hardware"} id={2} nome={"Aprimoramento do harware"} />
-                    <Servico custo={2000} desc={"Serve para melhorar o hardware"} id={2} nome={"Aprimoramento do harware"} />
+                    
+                    {
+                        servicosJson && servicosJson.length > 0 ? (
+                            servicosJson.map((servico, index)=>{
+                                return (
+                                    <Servico
+                                    custo={servico.custo}
+                                    desc={servico.desc}
+                                    id={servico._id}
+                                    nome={servico.nome}
+                                    />
+                                )
+                            })
+                        ) : <>
+                            <p className={styles.noProjects}>Sem Servicos criados</p>
+                        </>
+                    }
                 </div>
 
             </div>

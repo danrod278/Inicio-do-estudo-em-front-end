@@ -40,3 +40,23 @@ export const editaProjeto = (nome, orcamento, tipo, _id)=>{
         console.log("Erro ao passar String de dados para JSON")
     }
 }
+
+export const carregaOrcAp = (_id)=>{
+    const stringJSON = localStorage.getItem("projetos") 
+    try{
+        var projetosJson = JSON.parse(stringJSON)
+    }catch (err){
+        console.log("Erro ao passar String de dados para JSON",err)
+    }
+    var projeto = projetosJson.filter(projeto => projeto._id==_id)
+    projeto = projeto[0]
+    if("servicos" in projeto){
+        //verifica se é cabivel ao orçamento esse serviço
+        var cont=0
+        for(var i =0;i<projeto.servicos.length;i++){
+            cont = cont+ projeto.servicos[i].custo 
+            console.log(cont)
+        }
+        return cont
+    }else return 0
+}

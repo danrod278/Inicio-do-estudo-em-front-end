@@ -79,5 +79,3 @@ function Projetos(){
 
 export default Projetos
 
-
-{/* <ProjetoComponente codeCor="blue" id={1} nome="Aplicar flash Message" orcamento={20000} tipo="Desenvolvimento"/> */}
