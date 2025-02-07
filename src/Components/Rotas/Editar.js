@@ -13,11 +13,13 @@ function Editar({nome, orc, tipo}){
     const [popup, setPopup] = useState({})
     const [mensagemService, setMensagemServices] = useState({})
     const [servicosJson, setServicosJson] = useState({})
+
     //load inicial
     const [nomeI, setNomeI] = useState()
     const [orcamentoI, setOrcamentoI] = useState()
     const [tipoI, setTipoI] = useState()
     const [orcAp, setOrcAp] = useState()
+
     //criar
     const [edit, setEdit] = useState()
     const [name, setName] = useState()
@@ -67,7 +69,10 @@ function Editar({nome, orc, tipo}){
     }
     const criaService = ()=>{
         
-        const statusSave = criaNovoServico(name, custo, desc, _id)
+        const statusSave = criaNovoServico(name, custo, desc, _id, atualizarServicos)
+        setName("")
+        setCusto("")
+        setDesc("")
         console.log(statusSave)
         if(statusSave[1]>0){
             setMensagemServices({estado:true, desc:statusSave[0], tipo:"sucesso"})
@@ -83,9 +88,6 @@ function Editar({nome, orc, tipo}){
     }
 
     //funções interativas
-    useEffect(()=>{
-        
-    })
 
     useEffect(()=>{
         setOrcAp(carregaOrcAp(_id))
@@ -121,6 +123,10 @@ function Editar({nome, orc, tipo}){
                 setPopup({popup:false})
         }, 4000)
         }
+    }
+    const atualizarServicos = (projetos)=>{
+        
+        setServicosJson(projetos)
     }
 
     return(
@@ -197,8 +203,11 @@ function Editar({nome, orc, tipo}){
                                     <Servico
                                     custo={servico.custo}
                                     desc={servico.desc}
-                                    id={servico._id}
+                                    _idServico={servico._id}
+                                    _idProjeto={_id}
                                     nome={servico.nome}
+                                    atualizaServicos={atualizarServicos}
+                                    
                                     />
                                 )
                             })
