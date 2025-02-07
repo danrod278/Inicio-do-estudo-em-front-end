@@ -70,9 +70,8 @@ function Editar({nome, orc, tipo}){
     const criaService = ()=>{
         
         const statusSave = criaNovoServico(name, custo, desc, _id, atualizarServicos)
-        setName("")
-        setCusto("")
-        setDesc("")
+        
+
         console.log(statusSave)
         if(statusSave[1]>0){
             setMensagemServices({estado:true, desc:statusSave[0], tipo:"sucesso"})
