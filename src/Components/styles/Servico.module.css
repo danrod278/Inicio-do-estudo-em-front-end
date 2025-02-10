@@ -73,3 +73,9 @@ p{
     padding: 5px 7px 0 0 ;
     
 }
+
+@media(max-width:540px){
+    .grandparent > div:nth-child(1) >div>h3{
+        font-size: 20px;
+    }
+}

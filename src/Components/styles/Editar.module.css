@@ -1,11 +1,13 @@
 main{
-    padding: 80px 450px 80px 450px;
+    width: 1040px;
+    margin: 0 auto;
+    padding: 50px 20px 20px 20px;
 }
 
 .cabecalhos{
     justify-content: space-between;
     display: flex;
-    
+    padding-bottom: 10px;
 }
 
 main>div:nth-child(1)>div>span{
@@ -34,7 +36,6 @@ main>div:nth-child(1)>div .cabecalhos> div{
 }
 
 .divEdit> select{
-    width:408px;
     height: 42px;
     margin: 20px 0 20px 0;
     background-color: rgb(236, 236, 236);
@@ -44,6 +45,7 @@ main>div:nth-child(1)>div .cabecalhos> div{
 
 .divServicos > .cabecalhos >div{
     margin-top: 25px;
+
 }
 
 hr{
@@ -55,4 +57,54 @@ hr{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     gap:51px
+}
+
+
+@media (max-width:1100px){
+    main{
+        width:700px
+    }
+    .cabecalhos{
+        justify-content: space-between;
+        display: block;
+        
+    }
+    .ServicesCards{
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr  ;
+        gap:51px
+    }
+}
+
+@media (max-width:760px){
+    main{
+        width:500px
+    }
+    .cabecalhos{
+        justify-content: space-between;
+        display: block;
+        
+    }
+    .ServicesCards{
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap:51px;
+        margin:0 auto;
+    }
+}
+
+@media (max-width:540px){
+    main{
+        width:300px
+    }
+    .cabecalhos{
+        justify-content: space-between;
+        display: block;
+        
+    }
+    main>div:nth-child(1)>div .cabecalhos> h1{
+        font-size: 25px;
+    }
 }
